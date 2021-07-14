@@ -134,7 +134,6 @@ The message root is 'NITF'.
   <xs:complexType name="dateTime">
     <xs:choice>
       <xs:element name="dateTime2.1" type="xs:dateTime" dfdl:lengthKind="explicit" dfdl:length="14" dfdl:calendarPatternKind="explicit" dfdl:calendarPattern="yyyyMMddHHmmss" />
-      <xs:element name="dateTime2.0" type="xs:dateTime" dfdl:lengthKind="explicit" dfdl:length="14" dfdl:calendarPatternKind="explicit" dfdl:calendarPattern="ddHHmmssXMMMyy" />
       <xs:element name="dateTime_str" type="xs:string" dfdl:lengthKind="explicit" dfdl:length="14" />
     </xs:choice>
   </xs:complexType>
@@ -165,6 +164,7 @@ The message root is 'NITF'.
       <xs:element name="blobPayload" dfdl:choiceBranchKey="blob" type="xs:anyURI" dfdlx:objectKind="bytes" dfdl:lengthKind="explicit" dfdl:length="{ $nitf:payloadSizeInBytes }" />
     </xs:choice>
   </xs:complexType>
+
 
   <xs:element name="NITF">
     <xs:complexType>
